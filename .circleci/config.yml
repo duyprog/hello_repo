@@ -4,10 +4,10 @@ version: 2.1
 
 
 jobs:
-  build-and-test: # This is the name of the job, feel free to change it to better match what you're trying to do!
+  build-and-lint: # This is the name of the job, feel free to change it to better match what you're trying to do!
 
-    docker:
-
+    docker: 
+      - image: cimg/python:3.10.2
     steps:
       - checkout
     #   - python/install-packages:
@@ -33,4 +33,4 @@ jobs:
 workflows:
   sample: 
     jobs:
-      - build-and-test
+      - build-and-lint
